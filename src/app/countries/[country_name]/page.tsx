@@ -4,7 +4,7 @@ import Link from "next/link";
 
 type Country = keyof typeof countryData;
 
-const CountryName = ({ params }: any) => {
+const CountryName = ({ params }: { params: { country_name: string } }) => {
   const countryName = params.country_name;
 
   const isValidCountry = (countryName: string): countryName is Country => {
